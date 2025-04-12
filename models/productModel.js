@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const productSchema = mongoose.Schema(
     {
         date: {
-            type: String,
-            required: [true, "Please enter date"],
+            // type: String,
+            // required: [true, "Please enter date"],
         },
         info: {
-            type: String,
-            required: false,
+            // type: String,
+            // required: false,
         },
         // info2: "",
         // info3: "",
@@ -28,10 +28,10 @@ const productSchema = mongoose.Schema(
         //     type: String,
         //     required: false,
         // }
-    },
-    {
-        timestamps: true,
     }
+    // {
+    //     timestamps: true,
+    // }
 );
 
 const Product = mongoose.model("Product", productSchema);
