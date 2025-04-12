@@ -12,7 +12,7 @@ const app = express();
 // const FRONTEND = process.env.FRONTEND;
 
 var corsOptions = {
-    origin: "http://localhost:5173",
+    origin: "https://bourek.cz",
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
