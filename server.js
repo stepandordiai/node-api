@@ -12,8 +12,7 @@ const app = express();
 // const FRONTEND = process.env.FRONTEND;
 
 var corsOptions = {
-    origin:
-        "https://bourek.cz" || "https://lighthearted-scone-c30471.netlify.app/",
+    origin: "https://lighthearted-scone-c30471.netlify.app/",
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
