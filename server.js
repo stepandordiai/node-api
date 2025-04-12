@@ -18,7 +18,7 @@ var corsOptions = {
 
 // List of allowed origins (admin + public site)
 const allowedOrigins = [
-    "https://stepan-dordiai-backend.onrender.com", // your public site
+    "https://lighthearted-scone-c30471.netlify.app", // your public site
     "http://localhost:5173", // local dev for admin
     "https://bourek.cz", // optional: live admin
 ];
