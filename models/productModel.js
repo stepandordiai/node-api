@@ -3,13 +3,17 @@ const mongoose = require("mongoose");
 const productSchema = mongoose.Schema(
     {
         date: {
-            // required: [true, "Please enter date"],
+            type: String,
+            required: [true, "Please enter date"],
         },
-        info1: {},
-        info2: {},
-        info3: {},
-        info4: {},
-        info5: {},
+        info: {
+            type: String,
+            required: false,
+        },
+        // info2: "",
+        // info3: "",
+        // info4: "",
+        // info5: "",
 
         // quantity: {
         //     type: Number,
