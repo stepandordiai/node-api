@@ -16,7 +16,27 @@ var corsOptions = {
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
-app.use(cors(corsOptions));
+// List of allowed origins (admin + public site)
+const allowedOrigins = [
+    "https://stepan-dordiai-backend.onrender.com", // your public site
+    "http://localhost:5173", // local dev for admin
+    "https://bourek.cz", // optional: live admin
+];
+
+app.use(
+    cors({
+        origin: function (origin, callback) {
+            if (!origin || allowedOrigins.includes(origin)) {
+                callback(null, true);
+                // } else {
+                //   callback(new Error('Not allowed by CORS'));
+            }
+        },
+        //   credentials: true, // If you use cookies or auth tokens
+    })
+);
+
+// app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
